@@ -1,13 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Risk & Reliability Platform</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
 
-    <h1>AI Risk & Reliability Platform</h1>
+    <div class="container">
+
+        <h1>AI Risk & Reliability Platform</h1>
+
+        <p class="subtitle">
+            AI Powered Dataset Audit, Cleaning & Risk Assessment Platform
+        </p>
+
+        <button class="upload-btn">Upload Dataset</button>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
 </body>
 
