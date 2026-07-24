@@ -1,30 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Risk & Reliability Platform</title>
-
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Risk & Reliability Platform</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-
 <body>
 
-    <div class="container">
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar">
+    <div class="logo">AI Risk & Reliability Platform</div>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#tech">Technology</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="btn btn-primary nav-upload-btn" onclick="uploadDataset()">Upload Dataset</button>
+</nav>
 
+<!-- ===== HERO SECTION ===== -->
+<section class="hero" id="home">
+    <div class="hero-left">
         <h1>AI Risk & Reliability Platform</h1>
-
-        <p class="subtitle">
-            AI Powered Dataset Audit, Cleaning & Risk Assessment Platform
+        <p class="subheading">AI-powered Dataset Auditing, Cleaning, Reliability Analysis and Deployment Readiness Platform.</p>
+        <p class="hero-desc">
+            Our platform helps you check your dataset before you feed it into a machine learning
+            model. It scans for missing values, bias, drift and other issues so your model
+            doesn't fail after deployment.
         </p>
-
-        <button class="upload-btn">Upload Dataset</button>
-
+        <div class="hero-buttons">
+            <button class="btn btn-primary" onclick="uploadDataset()">Upload Dataset</button>
+            <button class="btn btn-secondary" onclick="learnMore()">Learn More</button>
+        </div>
     </div>
 
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <div class="hero-right">
+        <!-- simple CSS illustration, no images used -->
+        <div class="illustration">
+            <div class="ill-circle"></div>
+            <div class="ill-bar bar1"></div>
+            <div class="ill-bar bar2"></div>
+            <div class="ill-bar bar3"></div>
+            <div class="ill-dot dot1"></div>
+            <div class="ill-dot dot2"></div>
+        </div>
+    </div>
+</section>
 
+<!-- ===== FEATURES SECTION ===== -->
+<section class="features" id="features">
+    <h2 class="section-title">Features</h2>
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="feature-icon">📁</div>
+            <h3>Dataset Upload</h3>
+            <p>Upload CSV datasets directly and get them ready for analysis in seconds.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🧹</div>
+            <h3>Automatic Cleaning</h3>
+            <p>Detect and handle missing values, duplicates and inconsistent data automatically.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">⚠️</div>
+            <h3>Risk Score</h3>
+            <p>Get an overall reliability score that shows how safe your dataset is for ML use.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">⚖️</div>
+            <h3>Bias Detection</h3>
+            <p>Identify bias across sensitive columns before it affects your model's predictions.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📉</div>
+            <h3>Data Drift Detection</h3>
+            <p>Compare training and new data distributions to catch drift early.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📄</div>
+            <h3>PDF Report</h3>
+            <p>Download a complete audit report of your dataset in a single click.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ABOUT SECTION ===== -->
+<section class="about" id="about">
+    <h2 class="section-title">About</h2>
+    <p class="about-text">
+        Before training a Machine Learning model, the dataset used should be audited carefully.
+        A dataset with missing values, hidden bias or unexpected drift can make a model fail once
+        it is deployed in the real world, even if it performed well during testing. Auditing a
+        dataset early helps developers catch these problems in advance and build models that are
+        more reliable, fair and ready for production.
+    </p>
+</section>
+
+<!-- ===== TECHNOLOGY SECTION ===== -->
+<section class="tech" id="tech">
+    <h2 class="section-title">Technology Stack</h2>
+    <div class="tech-grid">
+        <div class="tech-card">HTML</div>
+        <div class="tech-card">CSS</div>
+        <div class="tech-card">JavaScript</div>
+        <div class="tech-card">Python</div>
+        <div class="tech-card">Flask</div>
+        <div class="tech-card">Pandas</div>
+        <div class="tech-card">MySQL</div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" id="contact">
+    <p>AI Risk & Reliability Platform</p>
+    <p>Team: 4 CSE Final Year Students</p>
+    <p><a href="#" target="_blank">GitHub Repository</a></p>
+    <p>&copy; 2025 AI Risk & Reliability Platform. All rights reserved.</p>
+</footer>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
-
 </html>

@@ -1,0 +1,104 @@
+/* upload.css - Sprint 2 */
+
+.upload-section {
+    max-width: 750px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.upload-section h1 {
+    color: #0b3d91;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.upload-subtext {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.upload-box {
+    border: 2px dashed #0b3d91;
+    border-radius: 12px;
+    padding: 50px 30px;
+    background: #f9fbff;
+    transition: background 0.2s ease;
+}
+
+.upload-box.dragover {
+    background: #eaf0fc;
+}
+
+.upload-box p {
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.or-text {
+    font-size: 13px;
+    color: #999;
+    margin: 10px 0;
+}
+
+.file-name {
+    margin-top: 12px;
+    font-weight: 600;
+    color: #0b3d91;
+}
+
+#submitBtn {
+    margin-top: 15px;
+}
+
+#submitBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.error-msg {
+    color: #c0392b;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+/* preview table */
+.preview-box {
+    margin-top: 40px;
+    text-align: left;
+    background: #f5f8ff;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.preview-box h3 {
+    color: #0b3d91;
+    margin-bottom: 10px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px;
+}
+
+th, td {
+    border: 1px solid #dde3f0;
+    padding: 8px 12px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+th {
+    background: #0b3d91;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background: #f2f5fc;
+}
